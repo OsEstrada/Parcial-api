@@ -65,6 +65,7 @@ module.exports.create = (req, res, next) => {
             } else {
                 let newGame = new Game({
                     nombre: req.body.nombre,
+                    genero: req.body.genero,
                     consola: req.body.consola,
                     precio_lanzamiento: req.body.precio_lanzamiento,
                     año_lanzamiento: req.body.año_lanzamiento,

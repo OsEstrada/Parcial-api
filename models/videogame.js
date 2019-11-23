@@ -7,6 +7,7 @@ var GameSchema = Schema({
         required: true,
         unique: true
     },
+    genero: String,
     consola: String,
     precio_lanzamiento: String,
     año_lanzamiento: Number,
