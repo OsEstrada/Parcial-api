@@ -4,6 +4,7 @@ var debug = require('debug')('restful-api:user_controller');
 // Search a Game
 module.exports.getOne = (req, res, next) => {
     debug("Search Game", req.params);
+    
     Game.findOne({
             nombre: req.params.nombre
         })
@@ -78,7 +79,11 @@ module.exports.create = (req, res, next) => {
                 .header('Location', '/games/' + game.nombre)
                 .status(201)
                 .json({
-                    game: game.nombre
+                    nombre: game.nombre,
+                    genero: game.nombre,
+                    consola: game.nombre,
+                    precio_lanzamiento: game.nombre,
+                    año_lanzamiento: game.nombre
                 });
         }).catch(err => {
             next(err);
